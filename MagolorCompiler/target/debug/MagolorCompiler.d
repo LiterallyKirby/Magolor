@@ -1,0 +1,1 @@
+/home/kirby/Programming/Magolor/MagolorCompiler/target/debug/MagolorCompiler: /home/kirby/Programming/Magolor/MagolorCompiler/src/main.rs /home/kirby/Programming/Magolor/MagolorCompiler/src/modules/parser.rs /home/kirby/Programming/Magolor/MagolorCompiler/src/modules/tokenizer.rs

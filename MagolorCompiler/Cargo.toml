@@ -1,0 +1,10 @@
+[package]
+name = "MagolorCompiler"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.99"
+clap = "4.5.45"
+inkwell = "0.6.0"
+logos = "0.15.1"
