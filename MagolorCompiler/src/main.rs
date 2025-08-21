@@ -10,6 +10,7 @@ use logos::Logos;
 mod modules {
     pub mod tokenizer;
     pub mod parser;
+    pub mod IR;
 }
 
 fn main() -> Result<()> {
@@ -32,7 +33,8 @@ fn main() -> Result<()> {
     let AST = modules::parser::parseTokens(&tokens);
 
     println!("{:?}", AST);
- 
+
+    modules::IR::compile();
 
     Ok(())
 }
