@@ -34,7 +34,7 @@ fn main() -> Result<()> {
 
     println!("{:?}", AST);
 
-    modules::IR::compile();
+    modules::IR::compile(AST);
 
     Ok(())
 }
