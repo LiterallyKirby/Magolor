@@ -1,6 +1,8 @@
 use Console;
 
-console.print("balls");
+console.print("Guacamole Nigga Penis");
 
-let String x = "y";
+let i32 x = "y";
+
+console.print(x);
 
