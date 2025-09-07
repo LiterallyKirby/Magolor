@@ -1,0 +1,247 @@
+cargo:rerun-if-env-changed=LLVM_SYS_181_PREFIX
+cargo:rerun-if-changed=/usr/lib/llvm18
+cargo:rerun-if-env-changed=LLVM_SYS_181_IGNORE_BLOCKLIST
+cargo:rerun-if-env-changed=LLVM_SYS_181_STRICT_VERSIONING
+cargo:rerun-if-env-changed=LLVM_SYS_181_NO_CLEAN_CFLAGS
+cargo:rerun-if-env-changed=LLVM_SYS_181_USE_DEBUG_MSVCRT
+cargo:rerun-if-env-changed=LLVM_SYS_181_FFI_WORKAROUND
+OUT_DIR = Some(/home/kirby/Programming/Magolor/MagolorCompiler/target/debug/build/llvm-sys-53cca19a72ce6632/out)
+OPT_LEVEL = Some(0)
+TARGET = Some(x86_64-unknown-linux-gnu)
+HOST = Some(x86_64-unknown-linux-gnu)
+cargo:rerun-if-env-changed=CC_x86_64-unknown-linux-gnu
+CC_x86_64-unknown-linux-gnu = None
+cargo:rerun-if-env-changed=CC_x86_64_unknown_linux_gnu
+CC_x86_64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+RUSTC_WRAPPER = None
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+DEBUG = Some(true)
+CARGO_CFG_TARGET_FEATURE = Some(fxsr,sse,sse2)
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = Some(-I/usr/lib/llvm18/include  -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS )
+cargo:rerun-if-env-changed=CC_SHELL_ESCAPED_FLAGS
+CC_SHELL_ESCAPED_FLAGS = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS_x86_64_unknown_linux_gnu
+CFLAGS_x86_64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=CFLAGS_x86_64-unknown-linux-gnu
+CFLAGS_x86_64-unknown-linux-gnu = None
+CARGO_ENCODED_RUSTFLAGS = Some()
+cargo:rerun-if-env-changed=AR_x86_64-unknown-linux-gnu
+AR_x86_64-unknown-linux-gnu = None
+cargo:rerun-if-env-changed=AR_x86_64_unknown_linux_gnu
+AR_x86_64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=HOST_AR
+HOST_AR = None
+cargo:rerun-if-env-changed=AR
+AR = None
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+cargo:rerun-if-env-changed=HOST_ARFLAGS
+HOST_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS_x86_64_unknown_linux_gnu
+ARFLAGS_x86_64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=ARFLAGS_x86_64-unknown-linux-gnu
+ARFLAGS_x86_64-unknown-linux-gnu = None
+cargo:rustc-link-lib=static=targetwrappers
+cargo:rustc-link-search=native=/home/kirby/Programming/Magolor/MagolorCompiler/target/debug/build/llvm-sys-53cca19a72ce6632/out
+cargo:config_path=/usr/lib/llvm18/bin/llvm-config
+cargo:libdir=/usr/lib/llvm18/lib
+
+cargo:rustc-link-search=native=/usr/lib/llvm18/lib
+
+failed to get static libraries from llvm-config: "/usr/lib/llvm18/bin/llvm-config" "--libnames" "--link-static"
+
+Caused by:
+    status=exit status: 1
+    stdout=
+    stderr=llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMTargetParser.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMBinaryFormat.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMBitstreamReader.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMRemarks.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMCore.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMFuzzerCLI.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMBitReader.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMDebugInfoCodeView.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMMC.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMAsmParser.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMIRReader.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMMCParser.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMTextAPI.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMObject.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMDebugInfoDWARF.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMDebugInfoMSF.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMDebugInfoPDB.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMDebugInfoBTF.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMSymbolize.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMProfileData.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMAnalysis.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMBitWriter.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMTransformUtils.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMAggressiveInstCombine.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMInstCombine.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMScalarOpts.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMFuzzMutate.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMFileCheck.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMInterfaceStub.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMIRPrinter.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMCodeGenTypes.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMObjCARCOpts.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMTarget.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMCodeGen.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMSelectionDAG.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMAsmPrinter.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMMIRParser.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMGlobalISel.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMDWARFLinker.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMDWARFLinkerClassic.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMDWARFLinkerParallel.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMExtensions.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMFrontendDriver.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMFrontendHLSL.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMFrontendOpenACC.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMFrontendOffloading.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMFrontendOpenMP.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMInstrumentation.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMLinker.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMVectorize.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMipo.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMCoroutines.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMCFGuard.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMHipStdPar.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMPasses.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMLTO.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMMCDisassembler.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMMCA.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMObjCopy.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMObjectYAML.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMOption.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMDebugInfoGSYM.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMDebugInfoLogicalView.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMDWP.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMOrcShared.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMOrcTargetProcess.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMRuntimeDyld.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMExecutionEngine.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMInterpreter.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMJITLink.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMMCJIT.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMWindowsDriver.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMOrcJIT.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMOrcDebugging.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMPerfJITEvents.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMAArch64Info.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMAArch64Utils.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMAArch64Desc.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMAArch64CodeGen.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMAArch64AsmParser.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMAArch64Disassembler.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMAMDGPUInfo.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMAMDGPUUtils.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMAMDGPUDesc.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMAMDGPUCodeGen.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMAMDGPUAsmParser.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMAMDGPUDisassembler.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMAMDGPUTargetMCA.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMARMInfo.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMARMUtils.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMARMDesc.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMARMCodeGen.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMARMAsmParser.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMARMDisassembler.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMAVRInfo.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMAVRDesc.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMAVRCodeGen.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMAVRAsmParser.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMAVRDisassembler.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMBPFInfo.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMBPFDesc.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMBPFCodeGen.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMBPFAsmParser.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMBPFDisassembler.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMHexagonInfo.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMHexagonDesc.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMHexagonAsmParser.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMHexagonCodeGen.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMHexagonDisassembler.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMLanaiInfo.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMLanaiDesc.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMLanaiAsmParser.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMLanaiCodeGen.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMLanaiDisassembler.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMLoongArchInfo.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMLoongArchDesc.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMLoongArchCodeGen.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMLoongArchAsmParser.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMLoongArchDisassembler.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMMipsInfo.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMMipsDesc.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMMipsCodeGen.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMMipsAsmParser.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMMipsDisassembler.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMMSP430Info.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMMSP430Desc.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMMSP430CodeGen.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMMSP430AsmParser.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMMSP430Disassembler.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMNVPTXInfo.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMNVPTXDesc.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMNVPTXCodeGen.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMPowerPCInfo.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMPowerPCDesc.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMPowerPCCodeGen.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMPowerPCAsmParser.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMPowerPCDisassembler.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMRISCVInfo.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMRISCVDesc.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMRISCVCodeGen.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMRISCVAsmParser.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMRISCVDisassembler.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMRISCVTargetMCA.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMSparcInfo.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMSparcDesc.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMSparcCodeGen.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMSparcAsmParser.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMSparcDisassembler.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMSystemZInfo.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMSystemZDesc.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMSystemZCodeGen.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMSystemZAsmParser.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMSystemZDisassembler.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMVEInfo.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMVEDesc.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMVECodeGen.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMVEAsmParser.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMVEDisassembler.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMWebAssemblyInfo.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMWebAssemblyDesc.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMWebAssemblyUtils.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMWebAssemblyCodeGen.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMWebAssemblyAsmParser.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMWebAssemblyDisassembler.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMX86Info.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMX86Desc.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMX86CodeGen.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMX86AsmParser.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMX86Disassembler.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMX86TargetMCA.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMXCoreInfo.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMXCoreDesc.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMXCoreCodeGen.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMXCoreDisassembler.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMLineEditor.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMCoverage.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMTextAPIBinaryReader.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMDlltoolDriver.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMLibDriver.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMXRay.a
+    llvm-config: error: missing: /usr/lib/llvm18/lib/libLLVMWindowsManifest.a
+cargo:rustc-link-lib=dylib=LLVM-18
+cargo:rustc-link-lib=dylib=stdc++

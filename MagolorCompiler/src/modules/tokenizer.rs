@@ -48,6 +48,8 @@ pub enum Token {
     LessEq,
     #[token(">=")]
     GreaterEq,
+    #[token("==")]
+    EqEq,
 
     // Type keywords
     #[token("i32")]

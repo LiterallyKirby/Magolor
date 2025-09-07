@@ -17,6 +17,8 @@ pub enum ASTValue {
     LessThan(Box<ASTValue>, Box<ASTValue>),
     GreaterThan(Box<ASTValue>, Box<ASTValue>),
     Equal(Box<ASTValue>, Box<ASTValue>),
+EqualEqual(Box<ASTValue>, Box<ASTValue>),
+
     NotEqual(Box<ASTValue>, Box<ASTValue>),
     LessEqual(Box<ASTValue>, Box<ASTValue>),
     GreaterEqual(Box<ASTValue>, Box<ASTValue>),
@@ -166,6 +168,11 @@ fn parse_condition(tokens: &[Token], index: &mut usize) -> Result<ASTValue, Stri
             *index += 1;
             let right = parse_value(tokens, index)?;
             ASTValue::Equal(Box::new(left), Box::new(right))
+        }
+        Token::EqEq => {
+            *index += 1;
+            let right = parse_value(tokens, index)?;
+            ASTValue::EqualEqual(Box::new(left),Box::new(right))
         }
         Token::NotEq => {
             *index += 1;
